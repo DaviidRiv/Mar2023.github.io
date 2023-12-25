@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Marbella:3</title>
+    <link rel="stylesheet" href="./Style.css">
+    <style>
+        /* Estilos de tu página */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #00101a;
+            overflow: hidden;
+            font-family: 'Pacifico', cursive;
+        }
+
+        h1 {
+            position: absolute;
+            color: white;
+            top: 2rem;
+            /* Posición arriba */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            background: linear-gradient(to right, #6e00ff, #ff00b5);
+            /* Degradado morado */
+            -webkit-background-clip: text;
+            /* Clip del texto al degradado */
+            -webkit-text-fill-color: transparent;
+            /* Color transparente del texto */
+            animation: rotateText 8s linear infinite;
+            /* Animación de rotación */
+        }
+
+        @keyframes rotateText {
+            0% {
+                transform: translateX(-50%) rotateY(0deg);
+            }
+
+            100% {
+                transform: translateX(-50%) rotateY(360deg);
+            }
+        }
+        #image1,
+        #image2 {
+          width: 1050px; /* Ajusta el ancho máximo al tamaño del contenedor */
+          height: 1050px; /* Mantén la proporción de la imagen */
+        }
+    </style>
+</head>
+<canvas class="webgl"></canvas>
+<h1><small>Feliz Navidad</small> para ti y tu familia Marbella! <small>from</small> Deivid:p</h1>
+<div id="imageContainer" style="position: relative;" > </div>
+<div id="content">
+  <img id="image1" src="Sources/Image1.jpg" alt="Imagen 1" style="opacity: 0;" />
+  <p id="text1" style="opacity: 0;">Texto para la imagen 1</p>
+  <img id="image2" src="Sources/Image2.jpg" alt="Imagen 2" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image3" src="Sources/Image3.jpg" alt="Imagen 3" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>  
+  <img id="image5" src="Sources/Image5.jpg" alt="Imagen 5" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image6" src="Sources/Image6.jpg" alt="Imagen 6" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image7" src="Sources/Image7.jpg" alt="Imagen 7" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image8" src="Sources/Image8.jpg" alt="Imagen 8" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image9" src="Sources/Image9.jpg" alt="Imagen 9" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image10" src="Sources/Image10.jpg" alt="Imagen 10" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image11" src="Sources/Image11.jpg" alt="Imagen 11" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image12" src="Sources/Image12.jpg" alt="Imagen 12" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image13" src="Sources/Image13.jpg" alt="Imagen 13" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image14" src="Sources/Image14.jpg" alt="Imagen 14" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image15" src="Sources/Image15.jpg" alt="Imagen 15" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image16" src="Sources/Image16.jpg" alt="Imagen 16" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image17" src="Sources/Image17.jpg" alt="Imagen 17" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image18" src="Sources/Image18.jpg" alt="Imagen 18" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image19" src="Sources/Image19.jpg" alt="Imagen 19" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image20" src="Sources/Image20.jpg" alt="Imagen 20" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image21" src="Sources/Image21.jpg" alt="Imagen 21" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image22" src="Sources/Image22.jpg" alt="Imagen 22" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image23" src="Sources/Image23.jpg" alt="Imagen 23" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image24" src="Sources/Image24.jpg" alt="Imagen 24" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image25" src="Sources/Image25.jpg" alt="Imagen 25" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image26" src="Sources/Image26.jpg" alt="Imagen 26" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image27" src="Sources/Image27.jpg" alt="Imagen 27" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image28" src="Sources/Image28.jpg" alt="Imagen 28" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image29" src="Sources/Image29.jpg" alt="Imagen 29" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+  <img id="image30" src="Sources/Image30.jpg" alt="Imagen 30" style="opacity: 0;" />
+  <p id="text2" style="opacity: 0;">Texto para la imagen 2</p>
+>
+</div>
+
+<button id="play-music" type="button" onclick="showRandomImage()">Play</button>
+<footer>
+    <p>LoveU♡ </p>
+</footer>
+
+
+<script type="x-shader/x-vertex" id="vertexShader">
+  uniform float uTime;
+uniform float uSize;
+attribute float aScale;
+attribute vec3 aColor;
+attribute float phi;
+attribute float random;
+//attribute float random1;
+varying vec2 vUv;
+varying vec3 vColor;
+
+void main() {
+  float angle = phi;
+  angle += uTime * random;
+  angle = mod(angle, 39.3);
+  float radius = 0.065 * angle;
+  float rand = (random - 0.5) * 0.05 * pow(angle, .75);
+  vec3 myOffset =
+      vec3(radius * cos(angle) + rand,
+           2.9 - 2.7 * radius + rand +
+               0.1 * (random - .5) * pow(angle, .25) * sin(2.0 * uTime),
+           radius * sin(angle) + rand);
+  vec3 myPosition = myOffset;
+  vec4 modelPosition = modelMatrix * vec4(myPosition, 1.0);
+
+  vec4 viewPosition = viewMatrix * modelPosition;
+  viewPosition.xyz += position * aScale * uSize;
+  gl_Position = projectionMatrix * viewPosition;
+
+  vColor = aColor;
+  vUv = uv;
+}
+</script>
+
+<script type="x-shader/x-fragment" id="fragmentShader">
+  varying vec3 vColor;
+varying vec2 vUv;
+
+void main() {
+  vec2 uv = vUv;
+  vec3 color = vColor;
+  float strength = distance(uv, vec2(0.5));
+  strength *= 2.0;
+  strength = 1.0 - strength;
+  gl_FragColor = vec4(strength * color, 1.0);
+}
+</script>
+
+<script type="x-shader/x-vertex" id="vertexShaderExt">
+  #define M_PI 3.1415926535897932384626433832795
+varying float vColorMix;
+varying vec2 vUv;
+uniform float uTime;
+
+vec3 mod289(vec3 x) {
+  return x - floor(x * (1.0 / 289.0)) * 289.0;
+}
+
+vec4 mod289(vec4 x) {
+  return x - floor(x * (1.0 / 289.0)) * 289.0;
+}
+
+vec4 permute(vec4 x) {
+     return mod289(((x*34.0)+1.0)*x);
+}
+
+vec4 taylorInvSqrt(vec4 r)
+{
+  return 1.79284291400159 - 0.85373472095314 * r;
+}
+
+float snoise(vec3 v)
+  {
+  const vec2  C = vec2(1.0/6.0, 1.0/3.0) ;
+  const vec4  D = vec4(0.0, 0.5, 1.0, 2.0);
+
+// First corner
+  vec3 i  = floor(v + dot(v, C.yyy) );
+  vec3 x0 =   v - i + dot(i, C.xxx) ;
+
+// Other corners
+  vec3 g = step(x0.yzx, x0.xyz);
+  vec3 l = 1.0 - g;
+  vec3 i1 = min( g.xyz, l.zxy );
+  vec3 i2 = max( g.xyz, l.zxy );
+
+  //   x0 = x0 - 0.0 + 0.0 * C.xxx;
+  //   x1 = x0 - i1  + 1.0 * C.xxx;
+  //   x2 = x0 - i2  + 2.0 * C.xxx;
+  //   x3 = x0 - 1.0 + 3.0 * C.xxx;
+  vec3 x1 = x0 - i1 + C.xxx;
+  vec3 x2 = x0 - i2 + C.yyy; // 2.0*C.x = 1/3 = C.y
+  vec3 x3 = x0 - D.yyy;      // -1.0+3.0*C.x = -0.5 = -D.y
+
+// Permutations
+  i = mod289(i);
+  vec4 p = permute( permute( permute(
+             i.z + vec4(0.0, i1.z, i2.z, 1.0 ))
+           + i.y + vec4(0.0, i1.y, i2.y, 1.0 ))
+           + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
+
+// Gradients: 7x7 points over a square, mapped onto an octahedron.
+// The ring size 17*17 = 289 is close to a multiple of 49 (49*6 = 294)
+  float n_ = 0.142857142857; // 1.0/7.0
+  vec3  ns = n_ * D.wyz - D.xzx;
+
+  vec4 j = p - 49.0 * floor(p * ns.z * ns.z);  //  mod(p,7*7)
+
+  vec4 x_ = floor(j * ns.z);
+  vec4 y_ = floor(j - 7.0 * x_ );    // mod(j,N)
+
+  vec4 x = x_ *ns.x + ns.yyyy;
+  vec4 y = y_ *ns.x + ns.yyyy;
+  vec4 h = 1.0 - abs(x) - abs(y);
+
+  vec4 b0 = vec4( x.xy, y.xy );
+  vec4 b1 = vec4( x.zw, y.zw );
+
+  //vec4 s0 = vec4(lessThan(b0,0.0))*2.0 - 1.0;
+  //vec4 s1 = vec4(lessThan(b1,0.0))*2.0 - 1.0;
+  vec4 s0 = floor(b0)*2.0 + 1.0;
+  vec4 s1 = floor(b1)*2.0 + 1.0;
+  vec4 sh = -step(h, vec4(0.0));
+
+  vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
+  vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
+
+  vec3 p0 = vec3(a0.xy,h.x);
+  vec3 p1 = vec3(a0.zw,h.y);
+  vec3 p2 = vec3(a1.xy,h.z);
+  vec3 p3 = vec3(a1.zw,h.w);
+
+//Normalise gradients
+  vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));
+  p0 *= norm.x;
+  p1 *= norm.y;
+  p2 *= norm.z;
+  p3 *= norm.w;
+
+// Mix final noise value
+  vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
+  m = m * m;
+  return 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1),
+                                dot(p2,x2), dot(p3,x3) ) );
+  }
+
+
+mat3 rotation3dY(float angle) {
+	float s = sin(angle);
+	float c = cos(angle);
+
+	return mat3(
+		c, 0.0, -s,
+		0.0, 1.0, 0.0,
+		s, 0.0, c
+	);
+}
+
+vec3 rotateY(vec3 v, float angle) {
+	return rotation3dY(angle) * v;
+}
+
+
+void main() {
+  float t = uTime * 0.1;
+  float n = snoise(vec3(position.xy, t)*.2 + t);
+  vec3 pos = position + n * 0.1;
+  pos += 0.1*snoise(pos + t);
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+  vUv = uv;
+  vColorMix = n;
+}
+</script>
+
+<script type="x-shader/x-fragment" id="fragmentShaderExt">
+  varying float vColorMix;
+varying vec2 vUv;
+
+void main() {
+  float n = vColorMix;
+  vec2 uv = vUv;
+  gl_FragColor = vec4(mix(vec3(uv, 1.0), vec3(0.0, 1.0, 1.0), 1.0 - n*n) , n * n * n );
+}
+</script>
+<script>
+  const imagePaths = [
+      { imagePath: 'Sources/Image1.jpg', text: 'Primeras Flores' },
+      { imagePath: 'Sources/Image2.jpg', text: 'Primera Noche Juntos' },
+      { imagePath: 'Sources/Image3.jpg', text: 'Primer zingzito bb' },
+      { imagePath: 'Sources/Image5.jpg', text: 'guau guau' },
+      { imagePath: 'Sources/Image6.jpg', text: 'cotorrito' },
+      { imagePath: 'Sources/Image7.jpg', text: 'zing juntos' },
+      { imagePath: 'Sources/Image8.jpg', text: 'zing favoritooo:3' },
+      { imagePath: 'Sources/Image9.jpg', text: 'maicra' },
+      { imagePath: 'Sources/Image10.jpg', text: 'siempre arriba' },
+      { imagePath: 'Sources/Image11.jpg', text: 'corazon de nacho' },
+      { imagePath: 'Sources/Image12.jpg', text: 'cuando era importante' },
+      { imagePath: 'Sources/Image13.jpg', text: 'nos minioncasamosss' },
+      { imagePath: 'Sources/Image14.jpg', text: 'gatiicas:3' },
+      { imagePath: 'Sources/Image15.jpg', text: ':3p' },
+      { imagePath: 'Sources/Image16.jpg', text: 'flor que da fulgor <3' },
+      { imagePath: 'Sources/Image17.jpg', text: 'familyyy' },
+      { imagePath: 'Sources/Image18.jpg', text: 'cuerpazo con piercing' },
+      { imagePath: 'Sources/Image19.jpg', text: 'cumple mamá' },
+      { imagePath: 'Sources/Image20.jpg', text: 'don arthur' },
+      { imagePath: 'Sources/Image21.jpg', text: 'te amo :p' },
+      { imagePath: 'Sources/Image22.jpg', text: 'primera vez de titoo' },
+      { imagePath: 'Sources/Image23.jpg', text: 'sueter bonito' },
+      { imagePath: 'Sources/Image24.jpg', text: 'ramoo x mi cumplee :)' },
+      { imagePath: 'Sources/Image25.jpg', text: 'my princesss' },
+      { imagePath: 'Sources/Image26.jpg', text: 'amiga luz' },
+      { imagePath: 'Sources/Image27.jpg', text: 'amiga bety' },
+      { imagePath: 'Sources/Image28.jpg', text: 'silla que parecia morada' },
+      { imagePath: 'Sources/Image29.jpg', text: 'navidad 2023' },
+      { imagePath: 'Sources/Image30.jpg', text: 'llamada nocturna' },
+
+  ];
+
+  function showRandomImage() {
+      const randomImageData =
+          imagePaths[Math.floor(Math.random() * imagePaths.length)];
+
+      const imageContainer = document.getElementById('imageContainer');
+
+      const imageDiv = document.createElement('div');
+      imageDiv.style.position = 'absolute';
+
+      const imageElement = new Image();
+      imageElement.src = randomImageData.imagePath;
+      imageElement.style.width = '200px'; // Ajusta el tamaño de la imagen según tus necesidades
+      imageElement.style.height = '300px'; // Ajusta el tamaño de la imagen según tus necesidades
+
+      const textDiv = document.createElement('div');
+      textDiv.textContent = randomImageData.text;
+      textDiv.style.color = 'white';
+      textDiv.style.textAlign = 'center';
+
+      imageDiv.appendChild(imageElement);
+      imageDiv.appendChild(textDiv);
+
+      const positionX = Math.max(50, Math.floor(Math.random() * (window.innerWidth - 200))); // Limita el rango aleatorio para evitar que se acerque demasiado al borde derecho
+      const positionY = Math.max(50, Math.floor(Math.random() * (window.innerHeight - 300))); // Limita el rango aleatorio para evitar que se acerque demasiado al borde inferior
+
+      imageDiv.style.left = `${positionX}px`;
+      imageDiv.style.top = `${positionY}px`;
+      imageDiv.style.position = 'absolute';
+      imageDiv.style.zIndex = '9999'; // Asegura que esté por encima de otros elementos
+
+      imageContainer.appendChild(imageDiv);
+
+      setTimeout(() => {
+          imageContainer.removeChild(imageDiv);
+          setTimeout(showRandomImage, 3000);
+      }, 4000);
+  }
+
+</script>
+<script>
+    // GSAP animation
+    gsap.to('h1', { duration: 10.0, opacity: 1, ease: 'power3.out' });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.138.3/three.min.js"
+    integrity="sha512-AULygUpzXeEwzx9VCz35G2O8dW4DZzBlj7+kiVTgWTAKAEbxAMKhr53ze2w1W1g48H5mkbUDj8aQ0F+2LOxblQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+    integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./Script.js"></script>
+
+</html>
