@@ -341,43 +341,44 @@ void main() {
 
   ];
 
-  function showRandomImage() {
-      const randomImageData =
-          imagePaths[Math.floor(Math.random() * imagePaths.length)];
+  function showRandomImagesRandomly() {
+    const shuffledImages = imagePaths.sort(() => Math.random() - 0.5);
 
-      const imageContainer = document.getElementById('imageContainer');
+    shuffledImages.forEach((randomImageData, index) => {
+        setTimeout(() => {
+            const imageContainer = document.getElementById('imageContainer');
 
-      const imageDiv = document.createElement('div');
-      imageDiv.style.position = 'absolute';
+            const imageDiv = document.createElement('div');
+            imageDiv.style.position = 'absolute';
 
-      const imageElement = new Image();
-      imageElement.src = randomImageData.imagePath;
-      imageElement.style.width = '200px'; // Ajusta el tamaño de la imagen según tus necesidades
-      imageElement.style.height = '300px'; // Ajusta el tamaño de la imagen según tus necesidades
+            const imageElement = new Image();
+            imageElement.src = randomImageData.imagePath;
+            imageElement.style.width = '200px'; // Ajusta el tamaño de la imagen según tus necesidades
+            imageElement.style.height = '300px'; // Ajusta el tamaño de la imagen según tus necesidades
 
-      const textDiv = document.createElement('div');
-      textDiv.textContent = randomImageData.text;
-      textDiv.style.color = 'white';
-      textDiv.style.textAlign = 'center';
+            const textDiv = document.createElement('div');
+            textDiv.textContent = randomImageData.text;
+            textDiv.style.textAlign = 'center';
 
-      imageDiv.appendChild(imageElement);
-      imageDiv.appendChild(textDiv);
+            imageDiv.appendChild(imageElement);
+            imageDiv.appendChild(textDiv);
 
-      const positionX = Math.max(50, Math.floor(Math.random() * (window.innerWidth - 200))); // Limita el rango aleatorio para evitar que se acerque demasiado al borde derecho
-      const positionY = Math.max(50, Math.floor(Math.random() * (window.innerHeight - 300))); // Limita el rango aleatorio para evitar que se acerque demasiado al borde inferior
+            const positionX = Math.floor(Math.random() * window.innerWidth / 2) + window.innerWidth / 4;
+            const positionY = Math.floor(Math.random() * window.innerHeight / 2) + window.innerHeight / 4;
 
-      imageDiv.style.left = `${positionX}px`;
-      imageDiv.style.top = `${positionY}px`;
-      imageDiv.style.position = 'absolute';
-      imageDiv.style.zIndex = '9999'; // Asegura que esté por encima de otros elementos
+            imageDiv.style.left = `${positionX}px`;
+            imageDiv.style.top = `${positionY}px`;
+            imageDiv.style.position = 'absolute';
+            imageDiv.style.zIndex = '9999'; // Asegura que esté por encima de otros elementos
 
-      imageContainer.appendChild(imageDiv);
+            imageContainer.appendChild(imageDiv);
 
-      setTimeout(() => {
-          imageContainer.removeChild(imageDiv);
-          setTimeout(showRandomImage, 3000);
-      }, 4000);
-  }
+            setTimeout(() => {
+                imageContainer.removeChild(imageDiv);
+            }, 4000);
+        }, index * 5000); // Cambia el tiempo de intervalo si es necesario
+    });
+}
 
 </script>
 <script>
